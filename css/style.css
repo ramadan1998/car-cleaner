@@ -216,7 +216,7 @@
   content: "";
   position: absolute;
   width: 50%;
-  height: 50vh;
+  height: 125%;
   background-color: #ff364a;
   z-index: -2;
   transform: translate(-20%, -10%);
@@ -268,7 +268,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 50rem;
   width: 100vw auto;
   margin: 3rem 0;
   background-color: #181d37;
@@ -399,7 +399,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 65rem;
   width: 100vw auto;
   margin: 3rem 0;
   background-color: #181d37;
