@@ -329,7 +329,7 @@
   z-index: 0;
   position: relative;
 }
-
+/* 
 .section3 .left3 .sq3 {
   background-color: #ff364a;
   height: 50vh;
@@ -339,7 +339,7 @@
   top: -2.9rem;
   right: -2rem;
   border-radius: 10px;
-}
+} */
 
 .section3 .left3 .sqimg {
   background-color: #f6f6f6;
@@ -351,6 +351,17 @@
   z-index: 2;
   margin-right: 30px;
   border-radius: 10px;
+}
+.section3 .left3 .sqimg::after {
+  content: "";
+  position: absolute;
+  width: 20rem;
+  height: 32rem;
+  background-color: #ff364a;
+  z-index: -2;
+  transform: translate(140%, -10%);
+  border-radius: 5px;
+  margin-right: 30px;
 }
 
 .section3 .rigth3 {
@@ -516,7 +527,7 @@
 
 .section5 .bottom5 .left5 .sq1 {
   background-color: #ff364a;
-  height: 50vh;
+  height: 31.5rem;
   width: 15vw;
   z-index: -2;
   position: absolute;
@@ -744,6 +755,12 @@
 }
 
 @media (max-width: 990px) {
+  #header {
+    height: fit-content;
+  }
+  #header::after {
+    height: 100%;
+  }
   #header .save {
     display: flex;
     flex-direction: column;
@@ -771,29 +788,27 @@
   .section2 {
     /* height: auto; */
     padding: 2rem;
+    height: fit-content;
   }
   .section2 .bottom2 {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
   }
-  .section4 {
-    /* height: auto; */
-  }
-  .section4 .top4 {
-    /* height: auto; */
-  }
-  .section4 {
-    /* height: auto; */
-  }
+
   .section4 .cont4 {
     /* height: auto; */
     display: flex;
     flex-direction: column;
   }
+  .section4 {
+    height: fit-content;
+  }
 }
-
 @media (max-width: 678px) {
+  #header::after {
+    height: 100%;
+  }
   .navcontact {
     background-color: #181d37;
     height: 50px;
@@ -803,7 +818,28 @@
     align-items: center;
     /* width: 100vw auto; */
   }
+
+  .section3 {
+    text-align: center;
+  }
+
+  .section3 h3 {
+    align-self: center;
+  }
+  .section3 h1::after {
+    transform: translateX(100%);
+  }
+  .section3 .rigth3 {
+    margin: auto;
+  }
+  .section3 .rigth3 button {
+    align-self: center;
+  }
+  .section8 {
+    height: auto;
+  }
 }
+
 @media (max-width: 800px) {
   .section7 .top7 .left7 {
     display: none;
@@ -832,8 +868,13 @@
   .section8 .bottom8 {
     padding-top: 1rem;
   }
+  .section4 {
+    height: fit-content;
 }
 @media (max-width: 450px) {
+  #header::after {
+    height: 100%;
+  }
   #header .nav {
     display: none;
   }
@@ -858,5 +899,19 @@
   }
   .section5 h1 {
     text-align: center;
+  }
+  .section3 h1::after {
+    content: "";
+    position: absolute;
+    background-color: #ff364a;
+    width: 100px;
+    height: 5px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+  }
+  .section4 {
+    height: fit-content;
   }
 }
